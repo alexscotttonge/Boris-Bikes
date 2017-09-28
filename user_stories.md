@@ -16,6 +16,8 @@
 | Bike    |     bike_working  |
 | Docking station        |release_bike |
 
+- Bike <-- working? --> true/false
+- DockingStation <-- release_bike --> a Bike
 
 
 ## Challenge 11
@@ -26,7 +28,7 @@
 | Objects | Messages |
 |---------|----------|
 |Person | |
-| Bike | |
-| Docking Station| bike_docked |
+| Bike | docked? |
+| Docking Station|  |
 
-DockingStation <-- bike_docked true/false?
+Bike <-- docked? --> true/false?
