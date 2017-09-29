@@ -14,8 +14,9 @@ class DockingStation
   end
 
   def dock(bike)
-    fail('Station full!') if @bike
-    @bike = bike
+    fail('Station full!') if @bikes.length == 20
+    @bikes << bike
+    @bike = bike 
   end
 
 end
