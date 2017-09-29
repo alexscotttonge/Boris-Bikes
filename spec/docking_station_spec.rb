@@ -4,6 +4,7 @@ describe DockingStation do
 
   subject(:docking_station) { DockingStation.new }
 
+
   it 'DockingStation instances respond to method release_bike' do
     expect(docking_station).to respond_to :release_bike
   end
@@ -27,5 +28,10 @@ describe DockingStation do
      expect(docking_station.bike).to eq bike
   end
 
+  it "raise error when docking station already contains one bike" do
+    bike = Bike.new
+    subject.dock(bike)
+    expect {docking_station.dock(Bike.new)}.to raise_error('Station full!')
+  end
 
 end
